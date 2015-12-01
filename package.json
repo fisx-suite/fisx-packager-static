@@ -1,0 +1,20 @@
+{
+  "name": "fisx-packager-static",
+  "version": "0.1.0",
+  "description": "A static resource packager for fisx.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis",
+    "fisx",
+    "fis3",
+    "packager"
+  ],
+  "author": "sparklewhy@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "fisx-amd": "^0.1.0"
+  }
+}
