@@ -46,7 +46,7 @@ function initPackInfo(context, parseOpts, settings) {
 module.exports = exports = function (ret, pack, settings, opt) {
     try {
         var context = new Context(ret);
-        var parseOpts = _.assign({}, htmlParser.defaultOptions, settings.page);
+        var parseOpts = _.assign({}, htmlParser.getDefaultOption(), settings.page);
         parseOpts.pageFiles = context.findFileByPattern(parseOpts.files || '*.html');
         parseOpts.pageFiles.forEach(function (file) {
             htmlParser.initPagePlaceholder(file, context, parseOpts);
