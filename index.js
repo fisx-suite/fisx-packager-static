@@ -25,9 +25,9 @@ function initPackInfo(context, parseOpts, settings) {
     bundles.forEach(function (packItem) {
         var options = _.merge({}, packItem);
 
-        var load = packItem.load;
-        load === true && (load = parseOpts.pageFiles);
-        options.load = load;
+        var preLoad = packItem.preLoad;
+        preLoad === true && (preLoad = parseOpts.pageFiles);
+        options.preLoad = preLoad;
 
         options.host = null;
         options.rawCombines = null;
@@ -51,6 +51,10 @@ module.exports = exports = function (ret, pack, settings, opt) {
         parseOpts.pageFiles.forEach(function (file) {
             htmlParser.initPagePlaceholder(file, context, parseOpts);
         });
+
+        if (typeof settings.preprocessor === 'function') {
+            settings.preprocessor(ret, context);
+        }
 
         // 初始化打包信息
         initPackInfo(context, parseOpts, settings);

@@ -89,17 +89,17 @@ fis.match('::package', {
 
     * target - `string`: define the pack target file
 
-    * load - `boolean|Array`: `optional` whether sync load the pack file, by default `false`, only support `js` and `css` pack file. You can specify which page file will sync load the packed file, by default all page files, the output position is determined by the `placeholder` position of page file. If not placeholder is found, will auto insert placeholder by some rules, see below.
+    * preLoad - `boolean|Array`: `optional` whether sync pre load the pack file, by default `false`, only support `js` and `css` pack file. You can specify which page file will sync pre load the packed file, by default all page files, the output position is determined by the `placeholder` position of page file. If not placeholder is found, will auto insert placeholder by some rules, see below.
 
         ```javascript
         {
             files: ['/dep/**.js'],
             target: 'src/dep-all.js',
-            loader: 'index.html'
+            preLoad: 'index.html'
         }
         ```
 
-    * loadOrder - `number`: `optional` define the sync load order, the smaller the number is, the load order has higher priorities. In addition, you can using the `packOrder` file attribute to determine the pack priority.
+    * packOrder - `number`: `optional` define the sync load order, the smaller the number is, the load order has higher priorities. In addition, you can using the `packOrder` file attribute to determine the pack priority.
 
         ```javascript
         fis.match('src/common/css/base.css', {
@@ -126,3 +126,11 @@ fis.match('::package', {
 * stylePlaceholder - `string`: the style placeholder used to define the position to insert link style, by default is `<!--STYLE_PLACEHOLDER-->`.
 
 * resourceConfigPlaceholder - `string`: the `require.config` placeholder used to define the position to  inline `require.config` information, by default is `<!--RESOURCECONFIG_PLACEHOLDER-->`.
+
+* preprocessor - `Function`: `optional`: before pack the files, you can do some work using this option.
+
+    ```javasctipt
+    preprocessor: function (ret, context) { 
+        // do something...
+    }
+    ```
