@@ -1,6 +1,8 @@
 fisx package plugin
 ========
 
+[![Dependency Status](https://david-dm.org/wuhy/fisx-packager-static.svg)](https://david-dm.org/wuhy/fisx-packager-static) [![devDependency Status](https://david-dm.org/wuhy/fisx-packager-static/dev-status.svg)](https://david-dm.org/wuhy/fisx-packager-static#info=devDependencies) [![NPM Version](https://img.shields.io/npm/v/fisx-packager-static.svg?style=flat)](https://npmjs.org/package/fisx-packager-static)
+
 > A static resource pack plugin for fisx.
 
 ## How to use
