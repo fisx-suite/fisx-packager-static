@@ -74,7 +74,7 @@ fis.match('::package', {
         ```
     * packDepStyle - `boolean|Object|Function`: `optional` pack the dependent style resource of entry module. The pack target file by default is the last linked style file of the page if existed. The detail usage is the same as the `packAsync`.
     
-    * extractVendor - `boolean|Object|Function`: `optional` extract the dependent vendor js modules of the entry module. The pack target file by default is `${page_file_path_basename_notextname}_vendor.js`. If you want to pack all page dependent vendor files to one file, you can specify the pack `target` file option. The detail usage is the same as the `packAsync`.
+    * extractVendor - `boolean|Object|Function`: `optional` extract the dependent vendor js modules of the entry module. The pack target file by default is `${page_file_path_basename_notextname}${md5(page_file_path, 8)}_vendor.js`. If you want to pack all page dependent vendor files to one file, you can specify the pack `target` file option. The detail usage is the same as the `packAsync`.
     
     * packCss - `boolean|Object|Function`: `optional` pack all linking style files as one file, by default `false`. The pack targe file by default is `${page_file_path_notextname}_aio.css`. The position of pack file linked is determined by the position `<!--STYLE_PLACEHOLDER-->` placeholder.
 
