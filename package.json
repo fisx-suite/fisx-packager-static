@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wuhy/fisx-packager-static.git"
+    "url": "https://github.com/fisx-suite/fisx-packager-static.git"
   },
   "bugs": {
-    "url": "http://github.com/wuhy/fisx-packager-static/issues"
+    "url": "http://github.com/fisx-suite/fisx-packager-static/issues"
   },
   "keywords": [
     "fis",
